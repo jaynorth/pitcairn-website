@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<!-- commentaire html -->
+<head>
+<meta charset="utf-8" />
+<title>Les Formulaires en ligne</title>
+<style>
+	input[type="text"], input[type="password"], select, textarea{
+		
+		border:1px solid blue;
+		padding:10px;
+		font-family:"Courier New", Courier, monospace;
+		width:200px;
+		}
+		
+</style>
+</head>
+
+<body>
+<form action="mail.php" method="post" >
+  <p>
+    <label for="f_email" >E-mail</label>
+    <br />
+    <!-- For ="" est pour ceux qui ont des pb d'accessibilité -->
+    <input  type="text" name="email" id="f_email" required /><!-- ajouter required pour obligatoire -->
+  </p>
+  <p>
+    <label for="f_code">Code Secret</label>
+    <br />
+    <input type="password" name="code" id="f_code" />
+  </p>
+  <label for="f_news">Inscription à la newsletter</label>
+  <input type="checkbox" name="news" id="f_news" value="OUI" checked />
+  <p>
+    <label for="f_poli_1">Madame</label>
+    <input type="radio" name="poli" id="f_poli_1" value="Madame" />
+    <label for="f_poli_2">Monsieur</label>
+    <input type="radio" name="poli" id="f_poli_2" value="Monsieur" checked />
+  </p>
+  <p>
+    <label for="f_ville" >Ville</label>
+    <select name="Ville" id="f_ville">
+      <option value="LS">Lausanne</option>
+      <option value="Vevey" selected>Vevey</option>
+      <option value="Morges">Morges</option>
+    </select>
+  </p>
+  <p>
+    <label for="f_comment">Votre Commentaire</label>
+    <br />
+    <textarea name="comment" id="f_comment"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="submit" value="Envoyer" />
+    <input type="reset" name="reset" value="Annuler" />
+  </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr">
+<!-- commentaire html -->
+<head>
+<meta charset="utf-8" />
+<title>Adamstown activities</title>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('.map').maphilight();
+});
+
+$.fn.maphilight.defaults = {
+	fill: true,
+	fillColor: 'FF9E0D',
+	fillOpacity: 0.2,
+	stroke: true,
+	strokeColor: 'FF9E0D',
+	strokeOpacity: 1,
+	strokeWidth: 1,
+	fade: true,
+	alwaysOn: false,
+	neverOn: false,
+	groupBy: false,
+	wrapClass: true,
+	shadow: false,
+	shadowX: 0,
+	shadowY: 0,
+	shadowRadius: 6,
+	shadowColor: '000000',
+	shadowOpacity: 0.8,
+	shadowPosition: 'outside',
+	shadowFrom: false
+}
+
+$(document).ready(function(){
+	$('#mapChart area').mouseover(function(){
+		var file=$(this).attr("data-load");
+		//console.log(file);
+		$('#mapDescription').load("mapDescription/"+file);
+	});
+});
+
+</script>
+</head>
+
+<body>
+<div id="page"> <!-- **************** PAGE ************************************************** -->
+  <div id="pageTop"> <!-- **************** PAGE TOP ************************************************** -->
+    <div id="header"><!-- **************** HEADER ************************************************** -->
+      <h1>Pitcairn Islands </h1>
+      <p>expeditions</p>
+    </div>
+    <!-- **************** END OF HEADER ************************************************** -->
+    
+    <div id="centerImage"><!-- **************** CENTER IMAGE ************************************************** --> 
+      
+    </div>
+    <!-- **************** END OF CENTER IMAGE ************************************************** --> 
+  </div>
+  <!-- **************** END OF PAGE TOP ************************************************** -->
+  
+  <div id="menu"><!-- **************** Menu ************************************************** -->
+    <div id="navBox">
+      <ul id="nav">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="history.html" id="history">History</a></li>
+        <li><a href="info.html" id="info">General Info</a></li>
+        <li><a href="Adamstown.html" id="todoON">See and do</a>
+          <ul id="nav2do">
+          	<li><a href="Adamstown.html">Adamstown Square</a></li>
+          	 <li><a href="AdamstownAround.html">Around Adamstown</a></li>
+             <li><a href="AdamstownActivities.html" class="nav2On">Activities</a></li>
+             <!--
+            <li><a href="diving.html">Diving</a></li>
+            <li><a href="rock.html">Rock Climbing</a></li>
+            <li><a href="StPaul.html">St Paul's pool</a></li>
+            <li><a href="nearbyIslands.html">Nearby islands trip </a></li>
+            <li><a href="Adamstown.html" class="nav2On">Adamstown</a></li>
+            <li><a href="cave.html">Christian's Cave</a></li>
+            -->
+          </ul>
+        </li>
+        <li><a href="contact.html" id="contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- **************** END OF Menu ************************************************** -->
+  
+  <div id="content"><!-- **************** CONTENT ************************************************** -->
+    
+    <h3>Adamstown and around activities</h3>
+    <p>Many activities are essential to everyday living, but you'll always find time for leisure    <br />Browse over the map below and click on areas of interest </p>
+    
+    <!-- IMAGE MAP ********************* --> 
+    
+    <img class="map" src="Images/InteractiveMap2.png" alt="map" width="550" height="385"  usemap="#mapChart" id="adamstownMap">
+    <map name="mapChart" id="mapChart">
+      <area shape="poly" coords="184,59,191,67,204,80,216,92,230,105,240,115,250,119,263,118,272,115,292,113,304,105,305,92,272,75,246,66,228,59,212,55" href="#cave" alt="Christian's cave" data-load="1.html">
+      <area shape="poly" coords="413,295,414,267,420,255,426,245,432,239,438,237,446,241,451,245,460,253,468,257,479,254,485,261" href="#downrope" alt="Down Rope"  data-load="2.html">
+      <area shape="poly" coords="194,173,201,162,213,155,221,146,226,139,231,134,237,143,239,150,248,153,254,161,266,166,279,166,288,166,283,175,277,187,273,202,271,211,262,209,258,211,258,218,256,225,250,223,238,211,232,212,232,216,217,207,210,207,201,194" href="#flatland" alt="Flatland" data-load="3.html">
+      <area shape="poly" coords="192,170,201,159,213,151,219,144,219,138,219,120,224,114,216,110,209,110,198,115,185,120,172,121,164,121,153,121,150,116,150,112,139,112,131,119,125,125,119,127,124,136,134,145,144,152,158,160,170,168,179,174,187,176" href="#garnetsridge" alt="Garnet's Ridge" data-load="4.html">
+      <area shape="poly" coords="290,168,297,170,307,172,314,178,319,186,319,193,316,202,313,206,315,211,314,218,318,225,308,231,292,235,281,233,269,232,261,229,258,224,259,214,261,209,272,210,274,199,277,189,281,180,285,173" href="#taroground" alt="Taro Ground" data-load="5.html">
+      <area shape="poly" coords="402,102,390,113,390,129,394,143,404,151,418,155,430,158,445,155,450,153,455,164,465,173,479,182,483,193,492,208,516,200,537,187,546,170,547,155,471,133,428,97" href="#bountybay" alt="Bounty Bay" data-load="6.html">
+      <area shape="poly" coords="70,104,81,115,98,125,108,131,118,127,129,118,140,109,150,103,158,92,163,85,168,80,164,69,165,63,174,61,185,58,165,43,140,36,119,70" href="#tedside" alt="Tedside" data-load="7.html">
+      <area shape="poly" coords="119,139,106,144,93,151,89,158,75,160,67,168,67,177,83,172,94,176,100,182,111,183,124,187,135,190,143,193,155,191,161,197,171,197,181,189,185,180,186,176,156,160,143,151,129,145" href="#highestpoint" alt="pawala ridge" data-load="8.html">
+      <area shape="poly" coords="155,215,168,220,181,226,187,231,182,239,180,246,182,253,173,257,160,259,147,262,143,251,138,233,139,218,138,211,143,207,151,209" href="#gudgeon" alt="Gudgeon" data-load="9.html">
+      <area shape="poly" coords="290,158,288,145,296,134,305,126,309,116,318,115,329,123,339,123,350,125,360,131,370,138,381,144,388,146,396,152,395,157,399,161,396,170,399,175,396,183,381,180,370,180,360,182,350,185,337,188,325,192,322,192,318,180,312,171,300,169,293,167" href="#adamstown" alt="adamstown" data-load="10.html">
+    </map>
+    <div id="mapDescription"></div>
+    <!-- END OF IMAGE MAP ************************** --> 
+
+    <!-- ACTIVITY BOXES ******************************************* -->
+    <dl class="doBox">
+      <dt><a href="diving.html">Diving >></a><img src="Images/PitcairnRudderfish-594x446.jpg" alt="fishing" /></dt>
+      <dd>Explore the wreck of the HMS Bounty and the Cornwallis, discover nearby islands underwater world.              
+        
+        Diving opportunities are plentiful and many spots are yet to be discovered. <br />
+        <a href="diving.html"> Read More</a> </dd>
+    </dl>
+    <dl class="doBox">
+      <dt><a href="cave.html">Christian's Cave >></a><img src="Images/pitcairn10.jpg" alt="Christian's Cave" /></dt>
+      <dd>Fletcher Christian's cave, past the school and further up, is where the lead mutineer is said to 
+        have watched for approaching ships and or hid from his ruthless 
+        fellow settlers when necessary.<a href="cave.html"> Read More</a></dd>
+    </dl>
+    <dl class="doBox">
+      <dt><a href="StPaul.html">St Paul's pool & Rock Climbing >></a><img src="Images/pitcairn2%20(1).jpg" alt="rock climbing" /></dt>
+      <dd>Pitcairn Island is itself a big rock, it offers many challenging cliffs and climbing over the ocean water
+        makes it a unique feature.<br />
+        <a href="StPaul.html"> Read More</a> </dd>
+    </dl>
+    <div class="resetFloat"></div>
+    <dl class="doBox">
+      <dt><a href="fishing.html">Fishing >></a><img src="Images_mod/4724477978_d34c628579_o.jpg" alt="fishing" /></dt>
+      <dd>Pitcairn's pristine waters ensure the fish are plentiful and delicious. 
+        Book a fishing trip with a local business or participate in a traditional community fishing trip.<a href="fishing.html"> Read More</a> </dd>
+    </dl>
+    <dl class="doBox">
+      <dt><a href="nearbyIslands.html">Nearby islands trip >></a><img src="Images/Untitled-19.jpg" alt="Henderson island" /></dt>
+      <dd>The nearest islands of Henderson, Oeno and Ducie can be visited if the weather permits. 
+        All unhabited and unspoiled by humans, witness endemic species of creatures and plants.<br />
+        <a href="nearbyIslands.html"> Read More</a> </dd>
+    </dl>
+      
+    <dl class="doBox">
+      <dt id="downrope"><a href="downrope.html">Down Rope >></a>
+      <img src="Images/71800715.jpg" alt="down rope" />
+      </dt>
+      <!-- <img src="Images/downrope.jpg" alt="down rope" width="295" height="167" /><img src="Images/downrope_up.jpg" alt="down rope" width="295" height="167" /></dd> -->
+      <dd>Down Rope is a steep cliff on the southeast edge of the island, it has ancient Polynesian petroglyphs in its face 
+        and an isolated sandy beach at its base.
+        <a href="downrope.html"> Read More</a> </dd>
+        <!--
+        At the end of the day, most every Pitcairner has been to Down Rope though, and there are surprisingly few stories of accidents. 
+        The worst anyone can recall was just two years ago when a crew member on a visiting tall ship, the Picton Castle, fell nearly 
+        half the way down, shattering his arm and breaking his back in three places. Within a month however he was nearly fully recovered, 
+        dubbed by media accounts as "The Pitcairn Flying Miracle."
+        
+        When you finally make it to sea level, the natural beauty of the place would  bee enough to make it worth the trip. 
+        Seeing the mysterious ancient Polynesian rock art petroglyphs makes you wonder who did it or why.
+        Polynesians came to this island roughly 900 years ago, but also possibly thousands of years before that. Some of the images bear a 
+        resemblance to other carvings on Easter Island or throughout the South Pacific, but we cannot ascribe definite meanings to any of them.
+        
+        Perhaps that is what makes rock art so captivating–like climbing the cliffs at Down Rope, it is unfamiliar, and leads to the unknown. 
+        Traveling that way physically or mentally always makes for a memorable adventure. </dd>
+        -->
+    </dl>
+  
+    <!--
+    <dl class="doBox">
+      <dt><a href="Adamstown.html">Adamstown >></a><img src="Images/Adamstown,%20Pitcairn%20Islands.jpg" alt="Adamstown" /></dt>
+      <dd>The capital and only town of Pitcairn Island. This is where all the facilities
+        are located and Pitkerners gather.<br />
+        <a href="Adamstown.html"> Read More</a></dd>
+    </dl>
+    -->
+    <p class="resetFloat"><a href="#home" class="backTop">Back To top</a></p>
+    <!-- END OF ACTIVITY BOXES ******************************************* --> 
+    
+  </div>
+  <!-- **************** END OF CONTENT ************************************************** -->
+ <div id="pageBottom"> 
+  <div id="footer"><!-- **************** FOOTER ************************************************** --> 
+    
+    
+    <ul id="navfooter">
+    	<li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        
+    </ul>
+
+  </div>
+  <!-- **************** END OF FOOTER ************************************************** --> 
+</div> 
+</div>
+<!-- **************** END OF PAGE ************************************************** -->
+</body>
+</html>

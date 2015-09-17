@@ -1,0 +1,30 @@
+*{
+	margin:0px;
+	padding: 0px;	
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 15px;
+}
+body{
+	
+	}
+p{
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: 20px;
+	line-height: 28px;
+	text-align: justify;
+	/* temporary paragraph width */
+	width: 849px;
+	padding-top: 50px;
+	word-spacing: 3px;
+	background-color:#CCC ;
+	/*color:#66F;*/
+	}
+ul{
+	margin:20px;
+}
+
+#nav{
+	list-style: none;
+	
+}
